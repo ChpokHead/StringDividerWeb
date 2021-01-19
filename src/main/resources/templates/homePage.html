@@ -1,0 +1,46 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/homePage.css}" />
+    <link rel="icon" th:href="@{/sdicon.png}" type="image/png"/>
+    <title>Разделить текст и строки на части</title></head>
+    <meta name="description" content="Здесь вы можете разделить текст на равные части онлайн. Разделить строку на равные части. Разделить текст на части онлайн.">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Keywords" content="Разделитель текста онлайн, разделить текст, разделить текст на части, разделить текст на части онлайн">
+    <script data-ad-client="ca-pub-8204871720668455" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<body>
+<h1>Разделитель текста на части</h1>
+<p>Здесь вы можете разделить любой текст на равные части онлайн.
+    Просто вставьте ваш текст в область для ввода текста.
+    Далее укажите необходимое количество букв в каждой строке разделенного текста.
+    Нажмите на кнопку "Разделить текст", результирующий текст отобразиться в текстовой области под пунктом "Результат".</p>
+    <form action="/" method="post">
+        <h2>Введите текст, который нужно разделить на строки:</h2>
+
+        <textarea id="dividingString" name="dividingString" required
+                  rows="10" cols="79" th:text="${dividingString}" placeholder="Да, человек смертен, но это было бы еще полбеды. Плохо то, что он иногда внезапно смертен, вот в чем фокус!"> </textarea>
+        <div class="inputblock">
+            <label for="numOfLetters">Количество букв в каждой строке:</label>
+            <input type="number" id="numOfLetters" name="numOfLetters" style="padding: 7px;" placeholder="10" th:value="${numOfLetters}" required><br><br>
+            <input type="submit" value="Разделить текст">
+        </div>
+
+
+    </form>
+
+    <h2 style="line-height: 22px;margin-top: 30px;">Результат:</h2>
+
+    <textarea id="resultString" name="resultString"
+              rows="10" cols="79" th:utext="${resultString}" placeholder="Да, челове
+к смертен,
+ но это бы
+ло бы еще
+полбеды. П
+лохо то, ч
+то он иног
+да внезапн
+о смертен,
+ вот в чем
+ фокус!">
+    </textarea>
+</body>
+</html>
